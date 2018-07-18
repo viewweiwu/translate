@@ -2,8 +2,8 @@ const translate = (obj = {}) => {
   let result = {}
   for (let key in obj) {
     let newKey = getNewKey(key)
-    
-    result[newKey] = typeof obj[key] === 'object'
+
+    result[newKey] = isPlainObject(obj[key])
       ? translate(obj[key])
       :  obj[key]
   }
