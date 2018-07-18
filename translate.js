@@ -5,7 +5,7 @@ const translate = (obj = {}) => {
 
     result[newKey] = isPlainObject(obj[key])
       ? translate(obj[key])
-      :  obj[key]
+      : obj[key]
   }
   return result
 }
